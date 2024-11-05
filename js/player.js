@@ -302,7 +302,7 @@ export default class Player {
   
   calcTalentUpgradePrice() {
     //qwert
-    return Math.pow(this.talent + this.talent / 100, (1.3 + 0.1 * this.talent)) * 100;
+    return Math.pow(this.talent + this.talent / 100, (1.3 + 0.01 * this.talent)) * 100;
   }
   isBreakthroughNeeded() {
     return !this.selectors.interFaceOverWrite.acknowledgmentButton.disabled;
