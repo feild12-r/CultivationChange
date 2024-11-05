@@ -60,7 +60,8 @@ export default class Player {
   }
   getRealmName = () => {
     var realmNameString = [
-      "pApprentice",
+  //qwert
+      "Apprentice",
       "Warrior",
       "Master",
       "King",
