@@ -59,7 +59,7 @@ export default class Player {
     return xpPercentageNumber + "%";
   }
   getRealmName = () => {
-    var realmNameString = [
+    /*var realmNameString = [
       //qwert
       "Early Apprentice",
       "Mid Apprentice",
@@ -72,7 +72,7 @@ export default class Player {
       "Early Master",
       "Mid Master",
       "Late Master",
-      "Peak Mater",
+      "Peak Master",
       "Early King",
       "Mid King",
       "Late King",
@@ -85,6 +85,14 @@ export default class Player {
       "Mid God",
       "Late God",
       "Peak God",
+    ];*/
+    var realmNameString = [
+      "Apprentice",
+      "Warrior",
+      "Master",
+      "Master",
+      "Emperor",
+      "God"
     ];
     var letterString = [
       "F",
@@ -97,8 +105,9 @@ export default class Player {
       "SSS",
     ]
     //qwert
-    if (this.realm > 240) {
-      return realmNameString[23] + " " + letterString[((this.realm -240) % 10)];
+    if (this.realm > 70) {
+      //return realmNameString[23] + " " + letterString[((this.realm -240) % 10)];
+      return realmNameString[5] + " " + str((this.realm - 70) % 10);
     }
     return realmNameString[Math.floor(this.realm / 10)];
   };
