@@ -230,7 +230,8 @@ export default class Player {
   }
 
   clickedBreakthroughButton() {
-    var realmUpgradeFailChance = (this.realm + 1) / 10;
+    //qwert
+    var realmUpgradeFailChance = (((this.realm + 1) / 10) - this.talent);
     var randomizeChance = Math.floor(1 + Math.random() * 10);
     if (randomizeChance <= realmUpgradeFailChance) {
       this.xp *= 1 - (this.realm + 1) / 100;
@@ -308,11 +309,12 @@ export default class Player {
   }
   setInterfaceOnBrakeThroughExplanation() {
     this.selectors.interFaceOverWrite.lineOneText.innerHTML =
-      "You are at the pick of the " + this.getRealmName() + " realm!";
+      "You are at the peak of the " + this.getRealmName() + " realm!";
     this.selectors.interFaceOverWrite.lineTwoText.innerHTML =
       "Try to Breakthrough by pressing the green button";
     this.selectors.interFaceOverWrite.lineThreeText.innerHTML =
-      "Your success rate of breaking through is: " + (99 - this.realm) + "%";
+    //qwert
+      "Your success rate of breaking through is: " + ((99 - this.realm) + this.talent) + "%";
     this.selectors.interFaceOverWrite.lineFourText.innerHTML =
       "Failing will disperse " +
       (this.realm + 1) +
