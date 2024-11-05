@@ -123,9 +123,10 @@ export default class Player {
       "Extreme",
       //qwert
       "Unmatched",
+      "Supreme",
     ];
     //qwert
-    if (this.talent >= 80) return "Unmatched - 9";
+    if (this.talent >= 90) return "Supreme - 9";
     return (
       talentNameString[Math.floor(this.talent / 10)] + "-" + (this.talent % 10)
     );
