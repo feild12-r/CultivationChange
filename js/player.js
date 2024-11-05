@@ -60,12 +60,31 @@ export default class Player {
   }
   getRealmName = () => {
     var realmNameString = [
-      "Apprentice",
-      "Warrior",
-      "Master",
-      "King",
-      "Emperor",
-      "God",
+      //qwert
+      "Early Apprentice",
+      "Mid Apprentice",
+      "Late Apprentice",
+      "Peak Apprentice",
+      "Early Warrior",
+      "Mid Warrior",
+      "Late Warrior",
+      "Peak Warrior",
+      "Early Master",
+      "Mid Master",
+      "Late Master",
+      "Peak Mater",
+      "Early King",
+      "Mid King",
+      "Late King",
+      "Peak King",
+      "Early Emperor",
+      "Mid Emperor",
+      "Late Emperor",
+      "Peak Emperor",
+      "Early God",
+      "Mid God",
+      "Late God",
+      "Peak God",
     ];
     var letterString = [
       "F",
@@ -78,8 +97,8 @@ export default class Player {
       "SSS",
     ]
     //qwert
-    if (this.realm > 50) {
-      return realmNameString[5] + " " + letterString[(this.realm % 10)];
+    if (this.realm > 240) {
+      return realmNameString[23] + " " + letterString[((this.realm -240) % 10)];
     }
     return realmNameString[Math.floor(this.realm / 10)];
   };
