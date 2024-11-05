@@ -66,8 +66,9 @@ export default class Player {
       "Emperor",
       "God",
     ];
+    //qwert
     if (this.realm > 50) {
-      return realmNameString[5];
+      return realmNameString[5] + "" + str(this.realm - 50);
     }
     return realmNameString[Math.floor(this.realm / 10)];
   };
@@ -81,8 +82,11 @@ export default class Player {
       "Good",
       "High",
       "Extreme",
+      //qwert
+      "Unmatched",
     ];
-    if (this.talent >= 70) return "Extreme - 9";
+    //qwert
+    if (this.talent >= 80) return "Unmatched - 9";
     return (
       talentNameString[Math.floor(this.talent / 10)] + "-" + (this.talent % 10)
     );
@@ -168,6 +172,11 @@ export default class Player {
       this.expMultiplayer = 1.15;
       if (this.realm >= 30) this.expMultiplayer = 1.1;
       if (this.realm >= 40) this.expMultiplayer = 1.05;
+      //qwert
+      if (this.realm >= 50) this.expMultiplayer = 1.00;
+      if (this.realm >= 60) this.expMultiplayer = 0.95;
+      if (this.realm >= 70) this.expMultiplayer = 0.90;
+      if (this.realm >= 80) this.expMultiplayer = 0.95;
     }
   }
 
@@ -280,7 +289,8 @@ export default class Player {
   }
   
   calcTalentUpgradePrice() {
-    return Math.pow(this.talent + this.talent / 100, 1.3) * 100;
+    //qwert
+    return Math.pow(this.talent + this.talent / 100, Math.pow(1.3, this.talent)) * 100;
   }
   isBreakthroughNeeded() {
     return !this.selectors.interFaceOverWrite.acknowledgmentButton.disabled;
