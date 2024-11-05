@@ -60,7 +60,6 @@ export default class Player {
   }
   getRealmName = () => {
     var realmNameString = [
-  //qwert
       "Apprentice",
       "Warrior",
       "Master",
@@ -68,9 +67,19 @@ export default class Player {
       "Emperor",
       "God",
     ];
+    var letterString = [
+      "F",
+      "D",
+      "C",
+      "B",
+      "A",
+      "S",
+      "SS",
+      "SSS",
+    ]
     //qwert
     if (this.realm > 50) {
-      return realmNameString[5] + "" + str(this.realm - 50);
+      return realmNameString[5] + " " + letterString[(this.realm % 10)];
     }
     return realmNameString[Math.floor(this.realm / 10)];
   };
@@ -292,7 +301,7 @@ export default class Player {
   
   calcTalentUpgradePrice() {
     //qwert
-    return Math.pow(this.talent + this.talent / 100, Math.pow(1.3, this.talent)) * 100;
+    return Math.pow(this.talent + this.talent / 100, (1.3 + 0.1 * this.talent)) * 100;
   }
   isBreakthroughNeeded() {
     return !this.selectors.interFaceOverWrite.acknowledgmentButton.disabled;
