@@ -309,6 +309,10 @@ export default class Player {
   }
   clickUpgradeTalentButton() {
     this.selectors.header.upgradeTalentButton.addEventListener("click", () => {
+      //qwert
+      if (this.talent == 90){
+        this.InterfaceDisplayFailTalent()
+      }
       if (this.spiritStones >= this.calcTalentUpgradePrice()) {
         this.spiritStones -= this.calcTalentUpgradePrice();
         this.talent++;
@@ -369,11 +373,16 @@ export default class Player {
     this.clearInterface();
     this.selectors.interFaceOverWrite.lineOneText.innerHTML = "Failed to Breakthrough";
   }
+  //qwert
   InterfaceDisplaySuccessToBreakthrough() {
     this.clearInterface();
     this.selectors.interFaceOverWrite.lineOneText.innerHTML = "Successfull Breakthrough!";
   }
-
+  //qwert
+  InterfaceDisplayFailTalent() {
+    this.clearInterface();
+    this.selectors.interFaceOverWrite.lineOneText.innerHTML = "Max Talent";
+  }
   displayFixedNumber(number) {
     // what tier? (determines  number symbol)
     const tier = (Math.log10(Math.abs(number)) / 3) | 0;
