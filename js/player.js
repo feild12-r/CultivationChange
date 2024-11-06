@@ -149,9 +149,10 @@ export default class Player {
     this.selectors.header.level.innerHTML = " " + this.level;
     this.selectors.header.realmName.innerHTML = " " + this.getRealmName() + "-";
     this.selectors.header.realmSubLevel.innerHTML = "  " + (this.realm % 10);
-    if (this.realm > 59) {
+    //qwert
+    /*if (this.realm > 59) {
       this.selectors.header.realmSubLevel.innerHTML = "  " + "S";
-    }
+    }*/
     this.selectors.header.talentLevel.innerHTML = this.getTalentLevelName();
     this.selectors.header.spiritStonesAmount.innerHTML =
       this.displayFixedNumber(this.spiritStones);
