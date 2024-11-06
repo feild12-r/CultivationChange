@@ -366,7 +366,7 @@ export default class Player {
   }
   InterfaceDisplayFailToBreakthrough() {
     this.clearInterface();
-    this.selectors.interFaceOverWrite.lineOneText.innerHTML = "Failed";
+    this.selectors.interFaceOverWrite.lineOneText.innerHTML = "Failed to Breakthrough";
   }
 
   displayFixedNumber(number) {
