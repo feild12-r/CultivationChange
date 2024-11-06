@@ -312,7 +312,7 @@ export default class Player {
   clickUpgradeTalentButton() {
     this.selectors.header.upgradeTalentButton.addEventListener("click", () => {
       //qwert
-      if (this.talent >= 90){
+      if (this.talent >= 89){
         this.InterfaceDisplayFailTalent()
         //qwert
         return;
