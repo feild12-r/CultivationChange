@@ -126,7 +126,7 @@ export default class Player {
       "Supreme",
     ];
     //qwert
-    if (this.talent >= 90) return "Supreme - 9";
+    if (this.talent >= 90) return "Supreme-9";
     return (
       talentNameString[Math.floor(this.talent / 10)] + "-" + (this.talent % 10)
     );
@@ -313,6 +313,7 @@ export default class Player {
       //qwert
       if (this.talent >= 90){
         this.InterfaceDisplayFailTalent()
+        return;
       }
       if (this.spiritStones >= this.calcTalentUpgradePrice()) {
         this.spiritStones -= this.calcTalentUpgradePrice();
