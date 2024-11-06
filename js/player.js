@@ -105,7 +105,7 @@ export default class Player {
       "SSS",
     ]
     //qwert
-    if (this.realm > 70) {
+    if (this.realm >= 70) {
       //return realmNameString[23] + " " + letterString[((this.realm -240) % 10)];
       return realmNameString[5] + " " + str((this.realm - 70) % 10);
     }
