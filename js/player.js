@@ -275,7 +275,7 @@ export default class Player {
         "hidden";
       this.canCultivate = true;
     } else {
-      this.InterfaceDisplaySucessToBreakthrough();
+      this.InterfaceDisplaySuccessToBreakthrough();
       this.selectors.playerStatus.breakThroughButton.style.visibility =
         "hidden";
       this.advanceRealm();
