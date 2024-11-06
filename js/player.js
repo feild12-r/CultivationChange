@@ -313,6 +313,7 @@ export default class Player {
       //qwert
       if (this.talent >= 90){
         this.InterfaceDisplayFailTalent()
+        //qwert
         return;
       }
       if (this.spiritStones >= this.calcTalentUpgradePrice()) {
