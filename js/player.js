@@ -42,7 +42,7 @@ export default class Player {
     this.level = 1;
     this.realm = 1;
     //qwert
-    this.spiritStones = 10000000;
+    this.spiritStones = 1000000000;
     this.spiritStonesMultiplier=1;
     this.talent = 1;
     this.BaseClickPower = 0.5;
