@@ -310,7 +310,7 @@ export default class Player {
   clickUpgradeTalentButton() {
     this.selectors.header.upgradeTalentButton.addEventListener("click", () => {
       //qwert
-      if (this.talent == 90){
+      if (this.talent >= 90){
         this.InterfaceDisplayFailTalent()
       }
       if (this.spiritStones >= this.calcTalentUpgradePrice()) {
