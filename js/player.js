@@ -275,6 +275,7 @@ export default class Player {
         "hidden";
       this.canCultivate = true;
     } else {
+      this.InterfaceDisplaySucessToBreakthrough();
       this.selectors.playerStatus.breakThroughButton.style.visibility =
         "hidden";
       this.advanceRealm();
@@ -367,6 +368,10 @@ export default class Player {
   InterfaceDisplayFailToBreakthrough() {
     this.clearInterface();
     this.selectors.interFaceOverWrite.lineOneText.innerHTML = "Failed to Breakthrough";
+  }
+  InterfaceDisplaySuccessToBreakthrough() {
+    this.clearInterface();
+    this.selectors.interFaceOverWrite.lineOneText.innerHTML = "Successfull Breakthrough!";
   }
 
   displayFixedNumber(number) {
