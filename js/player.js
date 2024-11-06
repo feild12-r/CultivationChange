@@ -274,6 +274,7 @@ export default class Player {
       this.selectors.playerStatus.breakThroughButton.style.visibility =
         "hidden";
       this.canCultivate = true;
+      this.updateFullUI();
     } else {
       this.InterfaceDisplaySuccessToBreakthrough();
       this.selectors.playerStatus.breakThroughButton.style.visibility =
