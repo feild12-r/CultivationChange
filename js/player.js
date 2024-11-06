@@ -210,13 +210,13 @@ export default class Player {
   changXpMultiplier() {
     if (this.realm >= 20) {
       this.expMultiplayer = 1.15;
-      if (this.realm >= 30) this.expMultiplayer = 1.1;
-      if (this.realm >= 40) this.expMultiplayer = 1.05;
       //qwert
-      if (this.realm >= 50) this.expMultiplayer = 1.00;
-      if (this.realm >= 60) this.expMultiplayer = 0.95;
-      if (this.realm >= 70) this.expMultiplayer = 0.90;
-      if (this.realm >= 80) this.expMultiplayer = 0.95;
+      if (this.realm >= 30) this.expMultiplayer = 1.2;
+      if (this.realm >= 40) this.expMultiplayer = 1.25;
+      if (this.realm >= 50) this.expMultiplayer = 1.3;
+      if (this.realm >= 60) this.expMultiplayer = 1.35;
+      if (this.realm >= 70) this.expMultiplayer = 1.4;
+      if (this.realm >= 80) this.expMultiplayer = 1.45;
     }
   }
 
