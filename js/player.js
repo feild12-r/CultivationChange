@@ -90,9 +90,10 @@ export default class Player {
       "Apprentice",
       "Warrior",
       "Master",
-      "Master",
+      "King",
       "Emperor",
-      "God"
+      "God",
+      "Boundless",
     ];
     var letterString = [
       "F",
@@ -107,7 +108,7 @@ export default class Player {
     //qwert
     if (this.realm >= 70) {
       //return realmNameString[23] + " " + letterString[((this.realm -240) % 10)];
-      return realmNameString[5] + " " + str((this.realm - 70) % 10);
+      return "Perfection " + str((this.realm - 70) % 10);
     }
     return realmNameString[Math.floor(this.realm / 10)];
   };
