@@ -260,10 +260,14 @@ export default class Player {
 
   clickedBreakthroughButton() {
     //qwert
-    var realmUpgradeFailChance = (((this.realm + 1) / 10) - this.talent);
+    var realmUpgradeFailChance = (((this.realm + 1) / 10) - (this.talent / 10));
     var randomizeChance = Math.floor(1 + Math.random() * 10);
     if (randomizeChance <= realmUpgradeFailChance) {
-      this.xp *= 1 - (this.realm + 1) / 100;
+      //qwert
+      //this.xp *= 1 - (this.realm + 1) / 100;
+      this.xp = 1;
+      //qwert
+      this.realm -= ((this.realm + 1) / 100);
       this.updatePlayerStatusUI();
       this.updateXpBars();
       this.InterfaceDisplayFailToBreakthrough();
@@ -331,7 +335,8 @@ export default class Player {
   
   calcTalentUpgradePrice() {
     //qwert
-    return Math.pow(this.talent + this.talent / 100, (1.3 + 0.01 * this.talent)) * 100;
+    //return Math.pow(this.talent + this.talent / 100, (1.3 + 0.01 * this.talent)) * 100;
+    return Math.pow(this.talent + this.talent / 100, 1.3 ) * 100;
   }
   isBreakthroughNeeded() {
     return !this.selectors.interFaceOverWrite.acknowledgmentButton.disabled;
@@ -343,7 +348,7 @@ export default class Player {
       "Try to Breakthrough by pressing the green button";
     this.selectors.interFaceOverWrite.lineThreeText.innerHTML =
     //qwert
-      "Your success rate of breaking through is: " + ((99 - this.realm) + this.talent) + "%";
+      "Your success rate of breaking through is: " + ((99 - this.realm) + (this.talent / 10)) + "%";
     this.selectors.interFaceOverWrite.lineFourText.innerHTML =
       "Failing will disperse " +
       (this.realm + 1) +
