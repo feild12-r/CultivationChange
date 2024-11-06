@@ -264,8 +264,8 @@ export default class Player {
     var randomizeChance = Math.floor(1 + Math.random() * 10);
     if (randomizeChance <= realmUpgradeFailChance) {
       //qwert
-      //this.xp *= 1 - (this.realm + 1) / 100;
-      this.xp = 1;
+      this.xp *= 1 - (this.realm + 1) / 100;
+      //this.xp = 1;
       //qwert
       this.realm -= ((this.realm + 1) / 100);
       this.updatePlayerStatusUI();
@@ -335,8 +335,8 @@ export default class Player {
   
   calcTalentUpgradePrice() {
     //qwert
-    //return Math.pow(this.talent + this.talent / 100, (1.3 + 0.01 * this.talent)) * 100;
-    return Math.pow(this.talent + this.talent / 100, 1.3 ) * 100;
+    return Math.pow(this.talent + this.talent / 100, (1.3 + (0.01 * this.talent))) * 100;
+    //return Math.pow(this.talent + this.talent / 100, 1.3 ) * 100;
   }
   isBreakthroughNeeded() {
     return !this.selectors.interFaceOverWrite.acknowledgmentButton.disabled;
